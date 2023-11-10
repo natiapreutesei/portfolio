@@ -1,3 +1,6 @@
+
+
+
 @font-face{
   src: url("../fonts/Roboto-Light.ttf");
   font-family: "robotol";
@@ -18,4 +21,110 @@
 @font-face{
   src: url("../fonts/TitilliumWeb-SemiBold.ttf");
   font-family: "tittiliumsb";
+}
+/*GENERAL CLASSES*/
+.w-30{
+  width: 25%;
+}
+
+/*VARIABLES*/
+$myorange: #f26c4f;
+$mybg: #020312;
+
+/*STARTING POINT FOR ALL MOBILE CSS*/
+/*BODY*/
+.bg-d{
+  background: $mybg;
+}
+/*NAVBAR*/
+.nav-link{
+  border-top:3px solid transparent;
+  width: 110px;
+  &:hover{
+    border-top:3px solid red;
+    width: 110px;
+  }
+}
+/*END NAVBAR*/
+
+/*HERO SECTION*/
+.bghero{
+  background: url("../images/bg-hero.jpg") no-repeat;
+}
+.bghero::before {
+  background: url("../images/bg-hero.jpg") no-repeat;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  filter: blur(10px);
+}
+.herocontent{
+  z-index: 1;
+}
+h1{
+  font-size:72px;
+  font-family:robotor;
+}
+#designer{
+  font-size:60px;
+  font-family:tittiliumsb;
+  padding-bottom: 1rem !important;
+  position: relative;
+}
+#designer:after{
+  content:"";
+  width:0;
+  height:0;
+  border-top:20px solid transparent;
+  border-left:20px solid white;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: -20px;
+  left: 25px;
+}
+#arrowdown{
+  height: 68px;
+  width: 68px;
+  background-color: $myorange;
+  position: absolute;
+  bottom: 0;
+  margin-left: 15px;
+}
+/*END HERO SECTION*/
+/*BEGIN MYSERVICES*/
+h2{
+  font-family: robotor;
+  font-size: 36px;
+}
+h3{
+  font-family: robotor;
+  font-size: 24px;
+}
+p{
+  font-family: robotor;
+  font-size: 16px;
+}
+.cardmyservices{
+  width: 20rem;
+  height: 20rem;
+  margin-top: 50px;
+}
+/*END MYSERVICES*/
+
+
+/*THIS IS THE STARTING POINT FOR ALL THE REST SCREEN-WIDTHS*/
+@media (min-width: 992px){
+  #logo{
+    position:absolute;
+    z-index: 1;
+  }
+  .nav-link{
+    border-top:3px solid transparent;
+    width: 100%;
+    &:hover{
+      border-top:3px solid $myorange;
+      width: 100%;
+    }
+  }
 }
