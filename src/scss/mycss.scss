@@ -1,11 +1,12 @@
-
-
-
+/*FONTS*/
 @font-face{
   src: url("../fonts/Roboto-Light.ttf");
   font-family: "robotol";
 }
-
+@font-face{
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-family: "robotob";
+}
 @font-face{
   src: url("../fonts/Roboto-Regular.ttf");
   font-family: "robotor";
@@ -22,21 +23,46 @@
   src: url("../fonts/TitilliumWeb-SemiBold.ttf");
   font-family: "tittiliumsb";
 }
+
 /*GENERAL CLASSES*/
-.w-30{
-  width: 25%;
+.w-80percent{
+  width: 81%;
 }
+.w-90percent{
+  width: 94%;
+}
+.w-60percent{
+  width: 77%;
+}
+h1{
+  font-size:72px;
+  font-family:robotor;
+}
+h2{
+  font-family: robotor;
+  font-size: 36px;
+}
+h3{
+  font-family: robotor;
+  font-size: 24px;
+}
+p{
+  font-family: robotor;
+  font-size: 16px;
+}
+
 
 /*VARIABLES*/
 $myorange: #f26c4f;
 $mybg: #020312;
 
 /*STARTING POINT FOR ALL MOBILE CSS*/
-/*BODY*/
+/*INITIALIZE BODY*/
 .bg-d{
   background: $mybg;
 }
-/*NAVBAR*/
+
+/*START NAVBAR*/
 .nav-link{
   border-top:3px solid transparent;
   width: 110px;
@@ -62,10 +88,6 @@ $mybg: #020312;
 .herocontent{
   z-index: 1;
 }
-h1{
-  font-size:72px;
-  font-family:robotor;
-}
 #designer{
   font-size:60px;
   font-family:tittiliumsb;
@@ -83,35 +105,148 @@ h1{
   bottom: -20px;
   left: 25px;
 }
-#arrowdown{
-  height: 68px;
-  width: 68px;
-  background-color: $myorange;
-  position: absolute;
-  bottom: 0;
-  margin-left: 15px;
-}
 /*END HERO SECTION*/
+
 /*BEGIN MYSERVICES*/
-h2{
-  font-family: robotor;
-  font-size: 36px;
-}
-h3{
-  font-family: robotor;
-  font-size: 24px;
-}
-p{
-  font-family: robotor;
-  font-size: 16px;
-}
-.cardmyservices{
-  width: 20rem;
-  height: 20rem;
-  margin-top: 50px;
+#myservices{
+  h2{
+  margin-top: 140px !important;
+  margin-bottom: 100px !important;
+  }
 }
 /*END MYSERVICES*/
 
+/*BEGIN ABOUT ME*/
+#aboutme{
+  h2{
+    margin-top: 140px !important;
+    margin-bottom: 100px !important;
+  }
+}
+hr{
+  color: white;
+}
+#hithere{
+  position: relative;
+}
+#hithere:after{
+  content:"";
+  width:0;
+  height:0;
+  border-top:15px solid transparent;
+  border-left:15px solid white;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: -15px;
+  left: 9px;
+}
+#bgaboutme{
+  background: url("../images/img-man-looking.jpg") no-repeat;
+}
+.no-radius{
+  border-radius: 0;
+}
+/*END ABOUT ME*/
+
+/*START HIRE ME*/
+#hire_me{
+  background: url("../images/bg-keyboard.jpg") no-repeat;
+  background-size: cover;
+  height: 160px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  position: relative;
+}
+#worktoghether{
+  font-family: robotob;
+  font-size: 16px;
+  bottom: -25px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+#worktoghether:after{
+  content:"";
+  width:0;
+  height:0;
+  border-top:15px solid transparent;
+  border-left:15px solid $myorange;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: -14px;
+  left: 9px;
+}
+/*END HIRE ME*/
+
+/*START MY SKILLS*/
+#myskills{
+  h2{
+    margin-bottom: 100px !important;
+  }
+  #skillbar{
+    p{
+      font-family: robotom;
+      font-size: 18px;
+    }
+  }
+}
+
+
+
+#longline1{
+  border-bottom: #f26c4f solid 3px;
+  width: 92%;
+}
+#longline2{
+  border-bottom: #f26c4f solid 3px;
+  width: 74%;
+
+}
+#longline3{
+  border-bottom: #f26c4f solid 3px;
+  width: 87%;
+}
+#longline4{
+  border-bottom: #f26c4f solid 3px;
+  width: 70%;
+  margin-bottom: 220px;
+}
+.percent{
+  font-size: 12px !important;
+  position: relative;
+}
+.percent:after{
+    content:"";
+    width:0;
+    height:0;
+    border-top:9px solid transparent;
+    border-left:9px solid white;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: -10px;
+    left: 9px;
+  }
+/*END MY SKILLS*/
+
+/*START PORTFOLIO*/
+#portfolio{
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+.masonry-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.masonry-item {
+  width: 270px;
+  margin: 15px;
+}
+/*END PORTFOLIO*/
 
 /*THIS IS THE STARTING POINT FOR ALL THE REST SCREEN-WIDTHS*/
 @media (min-width: 992px){
@@ -126,5 +261,21 @@ p{
       border-top:3px solid $myorange;
       width: 100%;
     }
+  }
+  .cardmyservices{
+    width: 20rem;
+    height: 20rem;
+    margin-top: 35px;
+  }
+  #arrowdown{
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-down" viewBox="-2 -1.5 16 16"><path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/></svg>');
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 68px;
+    width: 68px;
+    background-color: $myorange;
+    position: absolute;
+    bottom: 0;
+    margin-left: 15px;
   }
 }

@@ -6,3 +6,18 @@
 @import '@fortawesome/fontawesome-free/css/regular.css';
 @import '@fortawesome/fontawesome-free/css/solid.css';
 @import '@fortawesome/fontawesome-free/css/v4-shims.css';
+
+
+
+$myorange: #f26c4f;
+
+@mixin mybootstrap-button($background, $color, $paddingy, $paddingx, $borderradius, $fontsize){
+  width: 155px;
+  height: 50px;
+  @include button-variant($color, $background);
+  @include button-size($paddingy, $paddingx, $fontsize, $borderradius);
+}
+
+.mymixin-buttonfull{
+  @include mybootstrap-button($myorange, $myorange, null, null, null, 14px);
+}
