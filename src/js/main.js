@@ -5,6 +5,7 @@ import '../scss/mycss.scss';
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
+// IMPORT MASONRY
 import Masonry from 'masonry-layout';
 import imagesLoaded from 'imagesloaded';
 
@@ -27,7 +28,19 @@ document.addEventListener('DOMContentLoaded', function () {
         // Initialize Masonry after images are loaded
         var masonry = new Masonry(masonryContainer, {
             itemSelector: '.masonry-item',
-            // Other options...
         });
     });
 });
+
+//IMPORT ODOMETER
+/*import Odometer from 'odometer';
+import 'odometer/themes/odometer-theme-minimal.css';
+
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        const odometer = new Odometer({
+            el: document.querySelector('#clients'),
+            value: 456,
+        });
+    }, 10); // Delay initialization by 1 second
+});*/

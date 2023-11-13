@@ -15,6 +15,10 @@
   src: url("../fonts/Roboto-Medium.ttf");
   font-family: "robotom";
 }
+.robotom{
+  font-family: robotom;
+  font-size: 18px;
+}
 @font-face{
   src: url("../fonts/Roboto-Thin.ttf");
   font-family: "robotot";
@@ -25,6 +29,9 @@
 }
 
 /*GENERAL CLASSES*/
+.w-35{
+  width: 35%;
+}
 .w-80percent{
   width: 81%;
 }
@@ -189,9 +196,6 @@ hr{
     }
   }
 }
-
-
-
 #longline1{
   border-bottom: #f26c4f solid 3px;
   width: 92%;
@@ -229,6 +233,11 @@ hr{
 
 /*START PORTFOLIO*/
 #portfolio{
+  h2{
+    margin-bottom: 100px !important;
+  }
+}
+#portfolio{
   img {
     width: 100%;
     height: auto;
@@ -236,17 +245,75 @@ hr{
   }
 }
 .masonry-container {
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 35px;
+  gap: 35px;*/
 }
-
 .masonry-item {
   width: 270px;
   margin: 15px;
 }
 /*END PORTFOLIO*/
+
+/*START ODOMETER*/
+#sectionodometer{
+  background: url("../images/bg-man-sitting.jpg") no-repeat top;
+}
+.redn{
+  font-size: 60px;
+  color: $myorange;
+  font-family: robotol;
+  margin-top: 300px;
+}
+.podometer{
+  font-size: 18px;
+  font-family: robotom;
+  padding-bottom: 250px;
+}
+/*END ODOMETER*/
+
+/*START TESTIMONIALS*/
+.quotes{
+  width: 45px;
+  position: relative;
+  border-color: $myorange !important;
+  background: $myorange;
+}
+.quotes:after{
+  content:"";
+  width:0;
+  height:0;
+  border-top:9px solid transparent;
+  border-left:9px solid $myorange;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: -10px;
+  left: 9px;
+}
+.carousel-indicators button {
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px !important;
+}
+/*END TESTIMONIALS*/
+
+/*START GETINTOUCH*/
+#getintouch{
+  background: url("../images/bg-man-wall.jpg") no-repeat;
+}
+#getintouch{
+  h2{
+    margin-top: 100px !important;
+  }
+}
+#name{
+  width: 300px;
+}
+#inputEmail{
+  width: 300px;
+}
+/*END GETINTOUCH*/
 
 /*THIS IS THE STARTING POINT FOR ALL THE REST SCREEN-WIDTHS*/
 @media (min-width: 992px){
