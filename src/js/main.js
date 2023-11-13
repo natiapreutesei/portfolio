@@ -5,6 +5,12 @@ import '../scss/mycss.scss';
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
+// Scroll when button arrow down pressed
+function scrollDown() {
+    const targetElement = document.getElementById('myservices');
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+}
+
 // IMPORT MASONRY
 import Masonry from 'masonry-layout';
 import imagesLoaded from 'imagesloaded';

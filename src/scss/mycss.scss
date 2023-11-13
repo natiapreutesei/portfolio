@@ -29,6 +29,9 @@
 }
 
 /*GENERAL CLASSES*/
+html, body {
+  scroll-behavior: smooth;
+}
 .w-35{
   width: 35%;
 }
